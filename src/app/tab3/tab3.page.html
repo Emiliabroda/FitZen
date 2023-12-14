@@ -1,0 +1,32 @@
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+
+  </ion-header>
+
+  <h1>TUS RESERVAS</h1>
+
+  <div class="calendario">
+    <ion-datetime></ion-datetime>
+  </div>
+
+  <div class="dias">
+  <h2>Lunes:</h2>
+  <p *ngFor="let item of productoService.lunes">{{item}}</p>
+  <h2>Martes:</h2>
+  <p *ngFor="let item of productoService.martes">{{item}}</p>
+  <h2>Miercoles:</h2>
+  <p *ngFor="let item of productoService.miercoles">{{item}}</p>
+  <h2>Jueves:</h2>
+  <p *ngFor="let item of productoService.jueves">{{item}}</p>
+  <h2>Viernes:</h2>
+  <p *ngFor="let item of productoService.viernes">{{item}}</p>
+  <h2>Sabado:</h2>
+  <p *ngFor="let item of productoService.sabado">{{item}}</p>
+
+  </div>
+  
+
+
+ 
+</ion-content>

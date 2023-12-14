@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+</ion-header>
+<ion-content [fullscreen]="true">
+<div id="categoria-container">
+  <section class="entrenamiento">
+    <a
+    *ngFor="let item of categorias"
+    [ngStyle]="{'background-image':'url('+item.imgUrl+')'}"
+    [routerLink]="['/categoria',item.id]"  
+    >{{item.nombre}}</a>
+  </section>
+</div> 
+
+
+</ion-content>

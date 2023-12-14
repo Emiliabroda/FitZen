@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>    
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="tituloclase">Clases</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-card *ngFor="let pack of categoriasActual.producto">
+  <ion-card-header>
+    <ion-card-title>{{pack.nombre}} </ion-card-title>
+    <ion-card-subtitle>${{pack.precio}}</ion-card-subtitle>
+</ion-card-header>
+<ion-card-content>
+  {{pack.descripcion}}  
+  {{pack.dias}}
+</ion-card-content>
+<ion-button 
+class="botonRes"
+fill="clear"
+(click)="productoService.agregarReserva(pack)"
+>Reservar</ion-button>
+
+
+</ion-card>
+</ion-content>

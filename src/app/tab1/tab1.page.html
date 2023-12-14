@@ -1,0 +1,35 @@
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+  <div class="perfil">
+    <div class="fitzen">
+        <h1 class="imagen">FITZEN</h1>
+      <div class="formulario"> 
+        <ion-list>
+          <ion-item>
+            <ion-input [(ngModel)]="nombre" label="Nombre" placeholder=""></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="contrasena" label="Contraseña" type="password" value=""></ion-input>          
+          </ion-item>
+        </ion-list>
+      </div>
+        <ion-button 
+        fill="outline" 
+        class="botonR" 
+        [ngClass]="{'botonPresionado': botonPresionado}"
+        (click)="toggleBotonPresionado(); mostrarMensaje()">
+        Registrarse</ion-button>
+        <p *ngIf="mensajeVisible" class="mens">Ya estás registrado!</p>
+
+    </div>   
+        <h2> ¿QUIENES SOMOS?</h2>
+        <h3>¡Bienvenido al gimnasio FITZEN! somos tu destino para ponerte en forma y alcanzar tus objetivos de salud y bienestar. Unete a nuestra comunidad y descubre como puedes lograr tus metas de acondicionamiento fisico con nosotros. </h3>
+  </div> 
+
+
+</ion-content>
+
+    
